@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+button, input {
+	background-color: #4CAF50;
+	color: white;
+    border: solid 1px;
+    margin: 0;
+    font-size: 2vw;
+	text-align: center;
+}
+
+:focus {
+    outline: 0;
+}
+
+button:active {
+	background-color: #3f9342;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.root {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: calc(100vh / 3);
+}
+
+.item {
+	padding: 3vh;
+	display: grid;
+}
+
+.counter-holder {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: "plus plus-five""display display""minus minus-five";
+}
+
+.display {
+	grid-area: display;
+}
+
+.plus {
+	grid-area: plus;
+    border-radius: 0.9vw 0 0 0;
+}
+
+.minus {
+	grid-area: minus;
+    border-radius: 0 0 0 0.9vw;
+}
+
+.plus-five {
+	grid-area: plus-five;
+    border-radius: 0 0.9vw 0 0;
+}
+
+.minus-five {
+	grid-area: minus-five;
+    border-radius: 0 0 0.9vw 0;
+}
+
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.add {
+    border-radius: 0.9vw 0.9vw 0 0;
+}
+
+.remove {
+    border-radius: 0 0 0.9vw 0.9vw;
+}
